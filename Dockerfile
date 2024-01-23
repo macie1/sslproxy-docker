@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:mainline-alpine-slim
 
 EXPOSE 443
 
