@@ -3,6 +3,8 @@
 DEFAULT_CONF_FILE="etc/nginx/conf.d/default.conf"
 CERT_DIR="/etc/ssl/private/"
 
+apk add openssl
+
 if [ ! -r "$CERT_DIR/cert.key" ]; then
     openssl ecparam -genkey -name prime256v1 -out $CERT_DIR/cert.key
     chmod 644 $CERT_DIR/cert.key
